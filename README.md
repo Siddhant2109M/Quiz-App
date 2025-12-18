@@ -30,19 +30,38 @@ This project is commonly used as a backend service that can be connected to any 
 ## 📁 Project Structure
 
 ```
-quiz-app-spring
+quiz-app
 │
 ├── src/main/java
-│   └── com.example.quizapp
-│       ├── controller   # REST controllers
-│       ├── service      # Business logic
-│       ├── repository   # Database layer
-│       └── model        # Entity classes
+│ └── com.siddhant.quizapp
+│ ├── controller # REST controllers (API layer)
+│ │ ├── QuestionController.java
+│ │ └── QuizController.java
+│ │
+│ ├── service # Business logic layer
+│ │ ├── QuestionService.java
+│ │ └── QuizService.java
+│ │
+│ ├── dao # Data Access Layer (JPA Repositories)
+│ │ ├── QuestionDao.java
+│ │ └── QuizDao.java
+│ │
+│ ├── model # Entity & DTO classes
+│ │ ├── Question.java
+│ │ ├── Quiz.java
+│ │ ├── QuestionWrapper.java
+│ │ └── Response.java
+│ │
+│ └── QuizAppApplication.java # Main Spring Boot class
 │
 ├── src/main/resources
-│   ├── application.properties
+│ ├── application.properties
+│ ├── static # Static files (if needed)
+│ └── templates # Templates (if needed)
 │
-└── pom.xml
+├── src/test/java # Unit tests
+├── pom.xml
+└── README.md
 ```
 
 ---
