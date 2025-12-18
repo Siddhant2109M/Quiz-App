@@ -52,7 +52,7 @@ quiz-app-spring
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/navinreddy20/quiz-app-spring.git
+git clone https://github.com/Siddhant2109M/Quiz-App.git
 cd quiz-app-spring
 ```
 
