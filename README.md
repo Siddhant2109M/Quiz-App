@@ -68,7 +68,7 @@ Edit `src/main/resources/application.properties`
 Example (PostgreSQL):
 
 ```properties
-spring.datasource.url=jdbc:postgresql://localhost:3306/quizdb
+spring.datasource.url=jdbc:postgresql://localhost:5432/quizdb
 spring.datasource.username=postgres
 spring.datasource.password=yourpassword
 
