@@ -65,11 +65,11 @@ cd quiz-app-spring
 
 Edit `src/main/resources/application.properties`
 
-Example (MySQL):
+Example (PostgreSQL):
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/quizdb
-spring.datasource.username=root
+spring.datasource.url=jdbc:postgresql://localhost:3306/quizdb
+spring.datasource.username=postgres
 spring.datasource.password=yourpassword
 
 spring.jpa.hibernate.ddl-auto=update
@@ -88,10 +88,10 @@ mvn spring-boot:run
 
 OR simply run the **main class** from your IDE.
 
-The application will start on:
+The application will start on Postman due to frontend of the project is not developed yet:
 
 ```
-http://localhost:8080
+http://localhost:2109
 ```
 
 ---
@@ -103,13 +103,23 @@ http://localhost:8080
 * **Add a question**
 
 ```
-POST /question/add
+POST http://localhost:2109/question/addQuestion
+```
+* **delete a question**
+
+```
+POST http://localhost:2109/question/deleteQuestion
 ```
 
 * **Get all questions**
 
 ```
-GET /question/all
+GET http://localhost:2109/question/allQuestions
+```
+* **Get  questions by category**
+
+```
+GET http://localhost:2109/question/category/Python
 ```
 
 ---
@@ -119,22 +129,20 @@ GET /question/all
 * **Create a quiz**
 
 ```
-POST /quiz/create
+POST http://localhost:2109/quiz/create?category=Java&numQ=5&title=JQuiz
 ```
-
-* **Get quiz by ID**
+* **Get Quiz Questions**
 
 ```
-GET /quiz/{id}
+GET http://localhost:2109/quiz/get/1
 ```
-
 * **Submit quiz answers**
 
 ```
-POST /quiz/submit/{id}
+POST http://localhost:2109/quiz/submit/1
 ```
 
-You can test these APIs using **Postman** or **Swagger** (if enabled).
+You can test these APIs using **Postman** .
 
 ---
 
